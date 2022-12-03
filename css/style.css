@@ -105,24 +105,28 @@ nav {
 
   .page-section h2 {
     display: flex;
-    flex: 1 1 auto;
     justify-content: flex-end;
     padding: 20px;
     border-right: solid 5px var(--two);
+    min-width: 200px;
   }
 
   .section-content {
     display: flex;
-    flex: 3 1 auto;
     justify-content: flex-start;
     align-items: center;
+    color: var(--text-main);
   }
 
   .section-content a {
     padding: 20px;
     margin: 20px;
-    color: var(--text-main);
     text-decoration: underline;
+  }
+
+  .section-content p {
+    padding: 20px;
+    margin: 20px;
   }
 
 }
