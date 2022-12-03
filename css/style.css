@@ -104,22 +104,41 @@ nav {
     ;
     margin: 20px;
     padding: 20px;
+    width: 100%;
+    
   }
 
   #headline-app {
     grid-area: main;
-    width: 300px;
-    background-color: yellow;
+    height: 200px;
+    position: relative;
+  }
+
+  #headline-app::before {
+    content: "";
+    background-image: url("../assets/pre-work-screenshot.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    opacity: 0.5;
   }
 
   #second-app {
     grid-area: two;
-    background-color: green;
+    background-image: url("../assets//retinentia-screenshot.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   #third-app {
     grid-area: three;
-    background-color: blue;
+    background-image: url("../assets/book-club-screenshot.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   #fourth-app {
@@ -133,7 +152,17 @@ nav {
   }
 
   .grid-box {
-    height: 100px;
+   display: flex;
+   margin: 10px;
+   border: solid 5px var(--two);
+  }
+
+  #app-grid h3 {
+    position: relative;
+    color: var(--four);
+    padding: 10px;
+    align-self: flex-end;
+    background-color: var(--button-background);
   }
 
 
@@ -145,7 +174,8 @@ nav {
 
   .page-section {
     display: flex;
-    justify-content: flex-start;
+    flex-grow: 1;
+    /* justify-content: flex-start; */
     align-items: center;
     margin: 20px;
   }
@@ -159,8 +189,9 @@ nav {
   }
 
   .section-content {
+    flex-grow: 1;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     color: var(--text-main);
   }
 
