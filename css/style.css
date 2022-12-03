@@ -41,6 +41,7 @@ nav {
   text-decoration: none;
 }
 
+
 /* For larger screen */
 @media screen and (min-width: 650px) {
   body {
@@ -102,8 +103,22 @@ nav {
     justify-content: space-between;
   }
 
+  #contact h2 {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+
   #contact-content {
-    
+    display: flex;
+    flex: 3 1 auto;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  #contact-content p {
+    padding: 20px;
+    margin: 20px;
   }
 
 }
