@@ -138,7 +138,7 @@ nav {
   }
 
   #fourth-app::before {
-    background-image: url("");
+    background-image: url("../assets/calculator.png");
   }
 
   #fifth-app {
@@ -146,7 +146,7 @@ nav {
   }
 
   #fifth-app::before {
-    background-image: url("");
+    background-image: url("../assets/puzzle.jpg");
   }
 
 /* universal stylings for grid boxes */
@@ -156,7 +156,7 @@ nav {
    margin: 10px;
    border: solid 5px var(--two);
    height: 200px;
-  position: relative;
+   position: relative;
   }
 
   /* positions background image in the grid box with 
@@ -179,8 +179,10 @@ nav {
   }
 
   /* App title styles */
-  #app-grid h3 {
+  #app-grid a {
     position: relative;
+    bottom: -20px;
+    left: -20px;
     color: var(--four);
     padding: 10px;
     align-self: flex-end;
@@ -200,7 +202,7 @@ nav {
     flex-grow: 1;
     /* justify-content: flex-start; */
     align-items: center;
-    margin: 20px;
+    margin: 10px;
   }
 
   .page-section h2 {
