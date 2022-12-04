@@ -108,15 +108,61 @@ nav {
     
   }
 
+  /* grid box areas and background images */
   #headline-app {
     grid-area: main;
-    height: 200px;
-    position: relative;
   }
 
   #headline-app::before {
-    content: "";
     background-image: url("../assets/pre-work-screenshot.png");
+  }
+
+  #second-app {
+    grid-area: two;
+  }
+
+  #second-app::before {
+    background-image: url("../assets//retinentia-screenshot.png");
+  }
+
+  #third-app {
+    grid-area: three;
+  }
+
+  #third-app::before {
+    background-image: url("../assets/book-club-screenshot.png");
+  }
+
+  #fourth-app {
+    grid-area: four;
+  }
+
+  #fourth-app::before {
+    background-image: url("");
+  }
+
+  #fifth-app {
+    grid-area: five;
+  }
+
+  #fifth-app::before {
+    background-image: url("");
+  }
+
+/* universal stylings for grid boxes */
+
+  .grid-box {
+   display: flex;
+   margin: 10px;
+   border: solid 5px var(--two);
+   height: 200px;
+  position: relative;
+  }
+
+  /* positions background image in the grid box with 
+    an animation on hover to increase image opacity */
+  .grid-box::before {
+    content: "";
     background-size: cover;
     background-repeat: no-repeat;
     position: absolute;
@@ -128,40 +174,11 @@ nav {
     transition: opacity 500ms;
   }
 
-  #headline-app:hover::before {
+  .grid-box:hover::before {
     opacity: 1;
   }
 
-  #second-app {
-    grid-area: two;
-    background-image: url("../assets//retinentia-screenshot.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  #third-app {
-    grid-area: three;
-    background-image: url("../assets/book-club-screenshot.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
-  #fourth-app {
-    grid-area: four;
-    background-color: red;
-  }
-
-  #fifth-app {
-    grid-area: five;
-    background-color: beige;
-  }
-
-  .grid-box {
-   display: flex;
-   margin: 10px;
-   border: solid 5px var(--two);
-  }
-
+  /* App title styles */
   #app-grid h3 {
     position: relative;
     color: var(--four);
