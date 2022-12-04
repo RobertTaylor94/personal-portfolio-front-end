@@ -61,7 +61,7 @@ nav {
     margin: 20px;
   }
 
-  /* aligns title and avatar together */
+      /* aligns title and avatar together */
   #avatar-header {
     display: flex;
     justify-content: center;
@@ -74,7 +74,7 @@ nav {
     align-items: center;
   }
 
-/* styles for the links in the nav bar */
+    /* styles for the links in the nav bar */
   nav a {
     margin: 10px;
     padding: 5px 10px 5px 10px;
@@ -87,11 +87,111 @@ nav {
     height: 30%;
   }
 
-  /* red shadow on hover over nav bar anchors */
+/* red shadow on hover over nav bar anchors */
   nav a:hover {
     box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7);
   }
 
+/* portfolio grid setup */
+  #app-grid {
+    display: grid;
+    grid-template-columns: 1Fr 1Fr;
+    grid-template-rows: 1Fr 1Fr 1Fr;
+    grid-template-areas: 
+    "main main"
+    "two three"
+    "four five"
+    ;
+    margin: 20px;
+    padding: 20px;
+    width: 100%;
+    
+  }
+
+  /* grid box areas and background images */
+  #headline-app {
+    grid-area: main;
+  }
+
+  #headline-app::before {
+    background-image: url("../assets/pre-work-screenshot.png");
+  }
+
+  #second-app {
+    grid-area: two;
+  }
+
+  #second-app::before {
+    background-image: url("../assets//retinentia-screenshot.png");
+  }
+
+  #third-app {
+    grid-area: three;
+  }
+
+  #third-app::before {
+    background-image: url("../assets/book-club-screenshot.png");
+  }
+
+  #fourth-app {
+    grid-area: four;
+  }
+
+  #fourth-app::before {
+    background-image: url("../assets/calculator.png");
+  }
+
+  #fifth-app {
+    grid-area: five;
+  }
+
+  #fifth-app::before {
+    background-image: url("../assets/puzzle.jpg");
+  }
+
+/* universal stylings for grid boxes */
+
+  .grid-box {
+   display: flex;
+   margin: 10px;
+   border: solid 5px var(--two);
+   height: 200px;
+   position: relative;
+  }
+
+  /* positions background image in the grid box with 
+    an animation on hover to increase image opacity */
+  .grid-box::before {
+    content: "";
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+    opacity: 0.5;
+    transition: opacity 500ms;
+  }
+
+  .grid-box:hover::before {
+    opacity: 1;
+  }
+
+  /* App title styles */
+  #app-grid a {
+    position: relative;
+    bottom: -20px;
+    left: -20px;
+    color: var(--four);
+    padding: 10px;
+    align-self: flex-end;
+    background-color: var(--button-background);
+    border-radius: 0px 20px 0px 0px;
+  }
+
+
+  /* styles for each section of the main page*/
   .page-wrapper {
     display: flex;
     flex-direction: column;
@@ -99,8 +199,10 @@ nav {
 
   .page-section {
     display: flex;
+    flex-grow: 1;
+    /* justify-content: flex-start; */
     align-items: center;
-    justify-content: space-between;
+    margin: 10px;
   }
 
   .page-section h2 {
@@ -112,9 +214,9 @@ nav {
   }
 
   .section-content {
+    flex-grow: 1;
     display: flex;
     justify-content: flex-start;
-    align-items: center;
     color: var(--text-main);
   }
 
