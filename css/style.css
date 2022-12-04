@@ -16,7 +16,7 @@ body {
   /* padding: 10px; */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
-  background-color: yellow;
+  background-color: var(--background);
 }
 
 h1,
@@ -29,21 +29,139 @@ h6 {
   color: var(--text-main)
 }
 
-p {
-  margin: 0;
+/* Styles for the page header */
+header {
+  background-color: var(--button-background);
+}
+/* aligns title and avatar together */
+#avatar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ /* circular avatar image */
+header img {
+  border-radius: 200px;
+  height: 75px;
+  margin: 20px;
 }
 
 nav {
-  /* To add mobile nav bar */
+  display: flex;
+  justify-content: center;
+  padding: 5px;
 }
 
-#contact li {
+nav a {
   text-decoration: none;
+  color: var(--text-main);
+  background-color: var(--background);
+  padding: 8px;
+  margin: 10px;
+  border-radius: 20px;
 }
+
+.hero-banner {
+  display: none;
+}
+
+ /* styles for each section of the main page*/
+ .page-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+#contact .section-content a {
+  padding: 5px;
+  margin: 5px;
+}
+
+.page-section h2 {
+  border-bottom: solid 3px var(--two);
+}
+
+.section-content {
+  color: var(--text-main);
+}
+
+.section-content a {
+  padding: 20px;
+  margin: 20px;
+  text-decoration: none;
+  color: var(--text-main);
+  text-decoration: underline;
+}
+
+#app-grid {
+  display: flex;
+  flex-direction: column;
+  /* padding: 5px; */
+}
+
+.grid-box {
+  display: flex;
+  border: solid 1px var(--two);
+  margin: 5px;
+  border-radius: 20px;
+}
+
+#headline-app {
+  background-image: url("../assets/pre-work-screenshot.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#second-app {
+  background-image: url("../assets/retinentia-screenshot.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#third-app {
+  background-image: url("../assets/book-club-screenshot.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#fourth-app {
+  background-image: url("../assets/calculator.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#fifth-app {
+  background-image: url("../assets/puzzle.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ /* App title styles */
+ #app-grid a {
+  position: relative;
+  bottom: -20px;
+  left: -20px;
+  padding: 10px;
+  align-self: flex-end;
+  background-color: var(--button-background);
+  border-radius: 0px 20px 0px 19px;
+}
+
+#contact .section-content {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
 
 
 /* For larger screen */
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 768px) {
   body {
     background-color: var(--background);
   }
@@ -53,20 +171,6 @@ nav {
     display: flex;
     justify-content: space-between;
     background-color: var(--button-background);
-  }
-  
-  /* circular avatar image */
-  header img {
-    border-radius: 200px;
-    height: 75px;
-    margin: 20px;
-  }
-
-      /* aligns title and avatar together */
-  #avatar-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   nav {
@@ -128,6 +232,7 @@ nav {
   /* grid box areas and background images */
   #headline-app {
     grid-area: main;
+    background-image: none;
   }
 
   #headline-app::before {
@@ -136,6 +241,7 @@ nav {
 
   #second-app {
     grid-area: two;
+    background-image: none;
   }
 
   #second-app::before {
@@ -144,6 +250,7 @@ nav {
 
   #third-app {
     grid-area: three;
+    background-image: none;
   }
 
   #third-app::before {
@@ -152,6 +259,7 @@ nav {
 
   #fourth-app {
     grid-area: four;
+    background-image: none;
   }
 
   #fourth-app::before {
@@ -160,6 +268,7 @@ nav {
 
   #fifth-app {
     grid-area: five;
+    background-image: none;
   }
 
   #fifth-app::before {
@@ -170,10 +279,11 @@ nav {
 
   .grid-box {
    display: flex;
-   margin: 10px;
+   margin: 5px;
    border: solid 5px var(--two);
    height: 200px;
    position: relative;
+   border-radius: 0px;
   }
 
   /* positions background image in the grid box with 
@@ -197,21 +307,7 @@ nav {
 
   /* App title styles */
   #app-grid a {
-    position: relative;
-    bottom: -20px;
-    left: -20px;
-    color: var(--four);
-    padding: 10px;
-    align-self: flex-end;
-    background-color: var(--button-background);
     border-radius: 0px 20px 0px 0px;
-  }
-
-
-  /* styles for each section of the main page*/
-  .page-wrapper {
-    display: flex;
-    flex-direction: column;
   }
 
   .page-section {
@@ -223,10 +319,12 @@ nav {
   }
 
   .page-section h2 {
+    text-decoration: none;
     display: flex;
     justify-content: flex-end;
     padding: 20px;
     border-right: solid 5px var(--two);
+    border-bottom: none;
     min-width: 200px;
   }
 
@@ -234,18 +332,17 @@ nav {
     flex-grow: 1;
     display: flex;
     justify-content: flex-start;
-    color: var(--text-main);
-  }
-
-  .section-content a {
-    padding: 20px;
-    margin: 20px;
-    text-decoration: underline;
   }
 
   .section-content p {
     padding: 20px;
     margin: 20px;
+  }
+
+  #contact .section-content {
+    flex-direction: row;
+    margin: 20px;
+    padding: 20px;
   }
 
 }
