@@ -12,5 +12,8 @@ Hover effects such as the change in opacity when hovering over a project in wide
 
 <img src="assets/mobile-app.screenshot.PNG" width = "300" height = "600">
 
+## Deployed Site
+https://roberttaylor94.github.io/personal-portfolio-front-end/
+
 ## Credits
 Thanks to https://cssgradient.io for the easy creation of a linear-gradient effect
