@@ -10,7 +10,7 @@ CSS grid has allowed me to create a responsive grid that I can add more projects
 
 Hover effects such as the change in opacity when hovering over a project in widescreen browsers has been enabled using CSS.
 
-![Robert's portfolio page displayed on a mobile](assets/mobile-app.screenshot.PNG =100)
+![Robert's portfolio page displayed on a mobile](assets/mobile-app.screenshot.PNG width=100)
 
 ## Credits
 Thanks to https://cssgradient.io for the easy creation of a linear-gradient effect
