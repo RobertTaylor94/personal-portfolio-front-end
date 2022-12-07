@@ -1,7 +1,7 @@
 # personal-portfolio-front-end
 
 ## Description
-For our second weeks challenge we were tasked with creating a portfolio website using responsive web design and CSS features such as flfexbox and grid. I have built the site using repsonsive elements to look good on both widescreen and mobile devices and have allowed for the addition of new projects to my 'Work' section as a complete more projects.
+For our second weeks challenge we were tasked with creating a portfolio website using responsive web design and CSS features such as flexbox and grid. I have built the site using repsonsive elements to look good on both widescreen and mobile devices and have allowed for the addition of new projects to my 'Work' section as a complete more projects.
 
 ## Features
 Through the use of tools learnt in class and independent research I have enable several features. The navigation bar along the top of the site links to each section and will take a user there. 
